@@ -1,11 +1,14 @@
-print("Reading file content:\n")
-filename = "sample.txt"
-try:
-    with open(filename, "r") as file:
-        for i, line in enumerate(file,start=1):
-            print(f"Line {i}: {line.strip("\n")}")
+Student_marks={
+    "Alice":88,
+    "Bob":88,
+    "Charlie":88,
+    "David":88,
+    "Eve":88,
+}
 
-except FileNotFoundError:
-    print(f"The file '{filename}' was not found")
+name=input("Enter Student's Name: ")
+if name in Student_marks:
+    print(f"{name}'marks: {Student_marks[name]}")
 
-
+else:
+    print("Student not found")
